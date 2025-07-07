@@ -156,7 +156,7 @@ app.get('/:shortcode', (req, res) => {
   return res.redirect(entry.url);
 });
 
-// Clarify error for unsupported POST to /shorturls/:shortcode
+// error for unsupported POST to /shorturls/:shortcode
 app.post('/shorturls/:shortcode', (req, res) => {
   res.status(405).json({
     error: 'Method Not Allowed. To create a short URL, use POST /shorturls with JSON body. To get stats, use GET /shorturls/:shortcode.'
